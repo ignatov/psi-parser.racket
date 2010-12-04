@@ -1,0 +1,24 @@
+   P TestPack {
+     S Simple {
+       nat a, b;
+       int c
+       |
+       a <- b + c.d; // now with comments
+       b <- c.d * 2
+     } 
+     if (c == 0) then {
+       int a, b;
+       nat c 
+       |
+       a <- a * a;
+       b <- a / c 
+     } else
+       a <- c * b
+     fi
+     ;
+     Q OnSimple1 {
+       on simple 
+       in a, b
+       out c
+     }
+   }

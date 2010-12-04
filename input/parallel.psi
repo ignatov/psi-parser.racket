@@ -1,0 +1,12 @@
+P Simple {
+  S Simple {
+    int a, b, c, d, e, f, g
+    |
+    c <- a * 3;
+    d <- b * 2;
+    e <- c + a;
+    g <- d + b;
+    f <- e + g
+  };
+  Q find_c {on Simple in a, b out f}
+}

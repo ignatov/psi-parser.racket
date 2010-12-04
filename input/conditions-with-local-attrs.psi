@@ -1,0 +1,19 @@
+P Simple {
+  S Simple {
+    int a, b, c, d, e
+    |
+    a <- b + c;
+    c <- e * 2
+  }
+  if c > 0 then {
+    int i
+    |
+    i <- c * c;
+    b <- c * 2 * i
+  }
+  else
+    b <- c * 3
+  fi;
+
+  Q find_a {on Simple in e out a}
+}

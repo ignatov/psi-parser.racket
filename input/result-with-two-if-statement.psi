@@ -1,0 +1,21 @@
+P pack {
+  S Simple {
+    int a, b, c, d, e, f
+    |
+    e <- b + c;
+    a <- f + e
+  }
+  if c > 0 then {
+    int i
+    |
+    i <- c * c * c;
+    b <- c * 2 + i;
+    f <- i * e
+  }
+  else
+    b <- c * 3;
+    f <- e * c
+  fi;
+
+  Q find_a {on Simple in c out a}
+}

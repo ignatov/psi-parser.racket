@@ -1,0 +1,16 @@
+P Simple {
+  S Simple {
+    int a, b, c, d
+    |
+    a <- b + c;
+    b <- c * 2;
+    d <- a + b
+  };
+  Q find_a {on Simple in c out a};
+  Q find_a_2 {on Simple in b, c out a};
+  Q find_b {on Simple in c out b};
+  Q find_c {on Simple in c out c};
+  Q find_d {on Simple in c, b out d};
+  Q find_d1 {on Simple in c out d};
+  Q find_d2 {on Simple in b out d}
+}
